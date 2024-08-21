@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+html {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  overflow: hidden;
+  color: #2C2C54;
+}
+
+#render-target {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+main {
+  margin: 0px 32px;
+}
+
+.overlay {
+  position: absolute;
+}
+
+.icon {
+  width: 32px;
+}
+
+footer {
+  position: absolute;
+  bottom: 32px;
+  margin: 0px 32px;
+}
+
+.point {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.point.visible .icon {
+  opacity: 1;
+}
+
+.place-name {
+  padding: 4px 8px;
+  border-radius: 4px;
+  opacity: 0;
+  background-color: white;
+  font-weight: 600;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.point > .icon:hover + .place-name {
+  opacity: 1;
+}
+
+/* Info Panel */
+.info-panel {
+  position: absolute;
+  width: 30%;
+  right: 0;
+  height: 100vh;
+  background-color: white;
+  overflow-y: scroll;
+  display: none;
+}
+
+.close-button {
+  position: fixed;
+  z-index: 99;
+  height: 32px;
+  right: 32px;
+  top: 16px;
+  cursor: pointer;
+  display: none;
+}
+
+.info-panel > img {
+  width: 100%;
+}
+
+.info-panel .info {
+  padding: 32px;
+}
+
+.info h1 span {
+  font-size: 16px;
+}
+
+.show-info {
+  display: block
+}
