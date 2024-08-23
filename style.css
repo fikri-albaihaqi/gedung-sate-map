@@ -23,11 +23,60 @@ body {
 }
 
 main {
-  margin: 0px 32px;
+  margin: 0px;
 }
 
-.overlay {
+#preloader {
+  width: 100vw;
+  height: 100vh;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #D6D2CA;
+  z-index: 99;
+}
+
+#loader {
+  display: block;
+  height: 50px;
+  width: 50px;
+  border: 4px rgba(0, 0, 0, 0.25) solid;
+  border-top: 4px #2C2C54 solid;
+  border-radius: 50%;
+  -webkit-animation: spin2 1s infinite linear;
+          animation: spin2 1s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+@keyframes spin2 {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+.title {
+  position: absolute;
+  margin-left: 32px;
 }
 
 .icon {

@@ -43,11 +43,12 @@ loader.load('/models/gedung-sate-v1.glb', function (gltf) {
     if (child.isMesh) {
       child.castShadow = true
       child.receiveShadow = true
-      console.log(child)
     }
   })
 
   scene.scene.add(model);
+
+  document.getElementById("preloader").style.display = 'none'
 
 }, undefined, function (error) {
 
